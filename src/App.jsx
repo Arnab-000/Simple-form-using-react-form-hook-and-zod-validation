@@ -69,13 +69,13 @@ function App() {
                 type="text"
                 id="fullname"
                 name="fullname"
-                className="border border-black h-8 w-[40%] mb-3"
+                className="border border-black h-8 w-[40%] mb-5"
                 {...register("fullname", { required: true })}
               />
               <ErrorMessage message={errors.fullname?.message} />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 ">
               <div className="flex gap-1 justify-between">
                 <label
                   htmlFor="givenname"
