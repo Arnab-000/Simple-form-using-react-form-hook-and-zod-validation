@@ -1,12 +1,12 @@
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import ErrorMessage from "./Errormessage"
-import FinalMessage from "./AfterSubmit"
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import ErrorMessage from "./Errormessage";
+import FinalMessage from "./AfterSubmit";
 
-const phoneRegex = new RegExp(/^(01\d{9})$/)
-const mailRegex = new RegExp(/[a-z]+@gmail\.com/i)
+const phoneRegex = new RegExp(/^(01\d{9})$/);
+const mailRegex = new RegExp(/[a-z]+@gmail\.com/i);
 
 const schema = z.object({
   fullname: z.string().min(1, { message: "This field is required" }),
@@ -26,7 +26,7 @@ const schema = z.object({
     .regex(phoneRegex, { message: "Give correctly, gonna call you midnight" }),
   mail: z.string().regex(mailRegex, { message: "Only Gmail Allowed" }),
   maritalStatus: z.string(),
-})
+});
 
 function App() {
   const {
@@ -36,20 +36,20 @@ function App() {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
-  })
+  });
 
-  const [submittedData, setSubmittedData] = useState(null)
+  const [submittedData, setSubmittedData] = useState(null);
 
   const onSubmit = (data) => {
-    console.log(data)
-    setSubmittedData(data)
-  }
+    console.log(data);
+    setSubmittedData(data);
+  };
   return (
     <>
       {submittedData ? (
         <FinalMessage data={submittedData} />
       ) : (
-        <div className="w-50vw max-w-[80vw]  mt-6 p-4 mx-auto bg-slate-400">
+        <div className="w-50vw max-w-[90vw]  mt-6 p-4 mx-auto bg-slate-400">
           <h1 className=" mb-5 font-medium text-center">
             This is just a simple form created using React-form-hook and zod.
             The creator of this form is heartbroken for many reasons.
@@ -75,7 +75,7 @@ function App() {
               <ErrorMessage message={errors.fullname?.message} />
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
               <div className="flex gap-1 justify-between">
                 <label
                   htmlFor="givenname"
@@ -319,7 +319,7 @@ function App() {
         </div>
       )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
