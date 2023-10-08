@@ -311,11 +311,10 @@ function App() {
 
             <div className="flex justify-center mt-2">
               <button className="border border-solid bg-slate-700 font-bold text-slate-400 p-2 w-fit mx-auto">
-                Submit
+                Surprise!
               </button>
             </div>
           </form>
-          {/* {submittedData && <FinalMessage data={submittedData} />} */}
         </div>
       )}
     </>
