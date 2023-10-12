@@ -58,7 +58,7 @@ function App() {
             </p>
           </h1>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex gap-2">
+            <div className="flex flex-col lg:flex-row gap-2">
               <label
                 htmlFor="fullname"
                 className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -69,14 +69,14 @@ function App() {
                 type="text"
                 id="fullname"
                 name="fullname"
-                className="border border-black h-8 w-[40%] mb-5"
+                className="border border-black h-8 w-[80%] lg:w-[40%]mb-5"
                 {...register("fullname", { required: true })}
               />
               <ErrorMessage message={errors.fullname?.message} />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 ">
-              <div className="flex gap-1 justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 justify-between">
                 <label
                   htmlFor="givenname"
                   className="text-slate-800 font-medium"
@@ -94,7 +94,7 @@ function App() {
                 />
                 <ErrorMessage message={errors.givenname?.message} />
               </div>
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="surname"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -113,7 +113,7 @@ function App() {
                 <ErrorMessage message={errors.surname?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="crushname"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -132,7 +132,7 @@ function App() {
                 <ErrorMessage message={errors.crushname?.message} />
               </div>
 
-              <div className="flex gap-1 justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 justify-between">
                 <label
                   htmlFor="dateOfBirth"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -151,7 +151,7 @@ function App() {
                 <ErrorMessage message={errors.dateOfBirth?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="countryOfBirth"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -170,7 +170,7 @@ function App() {
                 <ErrorMessage message={errors.countryOfBirth?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="districtOfBirth"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -210,7 +210,7 @@ function App() {
                 <ErrorMessage message={errors.ninja?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="gender"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -231,7 +231,7 @@ function App() {
                 <ErrorMessage message={errors.gender?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="animal"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -252,7 +252,7 @@ function App() {
                 <ErrorMessage message={errors.animal?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="contact"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -270,7 +270,7 @@ function App() {
                 />
                 <ErrorMessage message={errors.contact?.message} />
               </div>
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="mail"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -289,7 +289,7 @@ function App() {
                 <ErrorMessage message={errors.mail?.message} />
               </div>
 
-              <div className="flex gap-1 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-1 items-start justify-between">
                 <label
                   htmlFor="maritalStatus"
                   className="text-slate-800 font-medium after:content-['*'] after:ml-0.5 after:text-red-500"
